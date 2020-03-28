@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Login from './components/views/auth/Login.jsx';
+import Login from './components/views/auth/Login';
+import Register from './components/views/auth/Register';
 
 import { url } from './constants';
 
@@ -17,6 +18,11 @@ function App() {
           key="login"
           path={url.login}
           component={Login}
+        />
+        <Route
+          key="login"
+          path={url.signup}
+          component={Register}
         />
       </Switch>
     </BrowserRouter>

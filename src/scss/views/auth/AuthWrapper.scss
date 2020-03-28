@@ -1,0 +1,18 @@
+.wrapper-auth {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #e3e6f0;
+  border-radius: .35rem;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+  margin-top: 3rem!important;
+  .form-group {
+    text-align: left;
+  }
+  @import './Register.scss';
+  @import './Login.scss';
+}
