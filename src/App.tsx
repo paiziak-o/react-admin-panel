@@ -3,26 +3,32 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Login from './components/views/auth/Login';
 import Register from './components/views/auth/Register';
+import ForgotPassword from './components/views/auth/ForgotPassword';
 
 import { url } from './constants';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
       <Switch>
         <Route
-          key="login"
+          key={url.login}
           path={url.login}
           component={Login}
         />
         <Route
-          key="login"
+          key={url.signup}
           path={url.signup}
           component={Register}
+        />
+        <Route
+          key={url.forgotPassword}
+          path={url.forgotPassword}
+          component={ForgotPassword}
         />
       </Switch>
     </BrowserRouter>
