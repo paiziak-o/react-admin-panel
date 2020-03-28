@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
-import  { url }  from '../../constants';
+import  { url }  from '../../../constants';
 
 const Login = () => {
   return (
