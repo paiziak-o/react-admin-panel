@@ -10,10 +10,9 @@ import { url } from './constants';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
-const App = () => {
-  return (
-    <div className="App">
-      <BrowserRouter>
+const App = () => (
+  <div className="App">
+    <BrowserRouter>
       <Switch>
         <Route
           key={url.login}
@@ -32,8 +31,7 @@ const App = () => {
         />
       </Switch>
     </BrowserRouter>
-    </div>
-  );
-}
+  </div>
+);
 
 export default App;
