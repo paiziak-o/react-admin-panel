@@ -3,6 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Login from './components/view/Login.jsx';
 
+import { url } from './constants';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
@@ -13,7 +15,7 @@ function App() {
       <Switch>
         <Route
           key="login"
-          path="/login"
+          path={url.login}
           component={Login}
         />
       </Switch>
