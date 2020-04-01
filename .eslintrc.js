@@ -25,5 +25,10 @@ module.exports = {
   "globals": {
     "window": true,
     "fetch": true,
+    "document": true,
+    
+    // Test globals
+    "test": true,
+    "expect": true,
   },
 };

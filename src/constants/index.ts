@@ -1,4 +1,4 @@
-export { url } from './url';
+export { default as url } from './url';
 
 // console.log(url);
 

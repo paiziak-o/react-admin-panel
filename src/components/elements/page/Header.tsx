@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Header = () => (
+const Header: React.FunctionComponent = () => (
   <header className="header">
     Header
   </header>

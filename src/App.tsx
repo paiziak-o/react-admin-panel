@@ -10,7 +10,7 @@ import { url } from './constants';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
-const App = () => (
+const App: React.FunctionComponent = () => (
   <div className="App">
     <BrowserRouter>
       <Switch>
