@@ -12,7 +12,7 @@ const AuthWrapper: React.FC<Props> = ({ children, wrapperClass }: Props) => (
       <Col xl={10} lg={12} md={9}>
         <div className="wrapper-auth">
           <Row>
-            <Col lg={6} className={`col-lg-6 d-none d-lg-block ${wrapperClass}-image`}></Col>
+            <Col lg={6} className={`col-lg-6 d-none d-lg-block ${wrapperClass}-image`} />
             <Col lg={6}>
               <div className="form-wrapper p-5">
                 {children}

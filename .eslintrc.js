@@ -26,6 +26,7 @@ module.exports = {
     "window": true,
     "fetch": true,
     "document": true,
+    "navigator": true,
     
     // Test globals
     "test": true,
