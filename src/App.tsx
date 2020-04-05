@@ -41,6 +41,11 @@ const App: React.FunctionComponent = () => (
           path={url.dashboard}
           component={Dashboard}
         />
+        <Route
+          key={url.root}
+          path={url.root}
+          component={AnonymLogin}
+        />
       </Switch>
     </BrowserRouter>
   </div>

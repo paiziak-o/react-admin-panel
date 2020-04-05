@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import { status } from '../../constants';
+import { status, url } from '../../constants';
 
 import { selectAuthStatus } from '../../reducers';
 
@@ -11,7 +11,7 @@ export default (AnonymComponent: FunctionComponent): FunctionComponent => {
 
     const loginStatus: string = useSelector(selectAuthStatus);
     if (loginStatus === status.success) {
-      return <Redirect to='/dashboard' />;
+      return <Redirect to={url.dashboard} />;
     }
     if (loginStatus === status.pending) {
       return (

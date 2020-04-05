@@ -7,14 +7,15 @@ import { types, loginPending, loginFailed, loginSuccess } from '../../actions';
 
 const register = (action$: any, state$: any, { auth }: { auth: IAuth }) => action$.pipe(
   ofType(types.auth.getCurrentUser),
-  rx.exhaustMap((action: any) => Observable.create((observer: any) => {
+  rx.exhaustMap(() => Observable.create((observer: any) => {
     observer.next(loginPending());
-    try {
-      auth.getCurrentUser();
-      observer.next(loginSuccess());
-    } catch (error) {
-      observer.next(loginFailed(error));
-    }
+    auth.getCurrentUser()
+      .then(() => {
+        observer.next(loginSuccess());
+      })
+      .catch((error: any) => {
+        observer.next(loginFailed(error));
+    });
   })),
 );
 

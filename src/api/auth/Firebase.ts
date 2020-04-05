@@ -29,14 +29,19 @@ class Firebase implements IAuth {
   register = async (email: string, password: string): Promise<any> => {
     return firebase.auth().createUserWithEmailAndPassword(email, password);
   }
-  getCurrentUser = async (): Promise<any> => {
-    return firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        // User is signed in.
-        return user;
-      }
 
-      throw Error('NO_LOGGED_IN'); 
+  getCurrentUser = async (): Promise<any> => {
+    return await new Promise((result, reject) => {
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          result({ result: true, ...user });
+        } else {
+          reject({
+            result: false,
+            error: 'NO_LOGGED_IN',
+          });
+        }
+      });
     });
   }
 }
