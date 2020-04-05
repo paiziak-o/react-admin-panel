@@ -1,0 +1,17 @@
+.admin-header {
+  background: #4e73df;
+  color: #fff;
+  .navbar-brand {
+    color: #fff;
+  }
+  .header-search-btn {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    &:hover {
+      color: #4e73df;
+      background-color: #fff;
+      border-color: #fff;
+    }
+  }
+}

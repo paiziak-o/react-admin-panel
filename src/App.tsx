@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Login from './components/views/auth/Login';
 import Register from './components/views/auth/Register';
 import ForgotPassword from './components/views/auth/ForgotPassword';
+import Dashboard from './components/views/dashboard/Dashboard';
+
+import anonymOnly from './components/hoc/AnonymOnly';
 
 import { url } from './constants';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
+
+const AnonymLogin: FunctionComponent = anonymOnly(Login);
+const AnonymRegister: FunctionComponent = anonymOnly(Register);
+const AnonymForgotPassword: FunctionComponent = anonymOnly(ForgotPassword);
 
 const App: React.FunctionComponent = () => (
   <div className="App">
@@ -17,17 +24,22 @@ const App: React.FunctionComponent = () => (
         <Route
           key={url.login}
           path={url.login}
-          component={Login}
+          component={AnonymLogin}
         />
         <Route
           key={url.signup}
           path={url.signup}
-          component={Register}
+          component={AnonymRegister}
         />
         <Route
           key={url.forgotPassword}
           path={url.forgotPassword}
-          component={ForgotPassword}
+          component={AnonymForgotPassword}
+        />
+        <Route
+          key={url.dashboard}
+          path={url.dashboard}
+          component={Dashboard}
         />
       </Switch>
     </BrowserRouter>

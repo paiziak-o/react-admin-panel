@@ -3,10 +3,9 @@ import {
   Navbar, Nav, NavDropdown, Form, FormControl, Button,
 } from 'react-bootstrap';
 
-
-const Header: React.FunctionComponent = () => (
+const Sidebar: React.FunctionComponent = () => (
   <Navbar expand="lg" className="admin-header">
-    <Navbar.Brand href="/">MM-Admin</Navbar.Brand>
+    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Form inline className="mr-auto">
@@ -28,4 +27,4 @@ const Header: React.FunctionComponent = () => (
   </Navbar>
 );
 
-export default Header;
+export default Sidebar;
