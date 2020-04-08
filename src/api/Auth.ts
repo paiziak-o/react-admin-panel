@@ -18,7 +18,10 @@ class Auth implements IAuth {
   login = (email: string, password: string): any => this.provider.login(email, password);
 
   register = (email: string, password: string): any => this.provider.register(email, password);
+
   getCurrentUser = (): any => this.provider.getCurrentUser();
+
+  logout = (): any => this.provider.logout();
 }
 
 export default Auth;

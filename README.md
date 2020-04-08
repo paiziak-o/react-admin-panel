@@ -4,6 +4,7 @@ Implemented pages
  - Login page
  - Register page (Under develop)
  - Forgot password (Under develop)
+ - Add Logout link to Dashbord navigation
  - Dashbord (Under develop)
 
  # Demo

@@ -13,5 +13,7 @@ export default {
     registerPending: 'AUTH.REGISTER.PENDING',
 
     getCurrentUser: 'AUTH.GET_CURRENT_USER',
+
+    logout: 'AUTH.LOGOUT',
   },
 };

@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Login from './components/views/auth/Login';
@@ -7,15 +7,18 @@ import ForgotPassword from './components/views/auth/ForgotPassword';
 import Dashboard from './components/views/dashboard/Dashboard';
 
 import anonymOnly from './components/hoc/AnonymOnly';
+import requiresAuth from './components/hoc/RequiresAuth';
 
 import { url } from './constants';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
-const AnonymLogin: FunctionComponent = anonymOnly(Login);
-const AnonymRegister: FunctionComponent = anonymOnly(Register);
-const AnonymForgotPassword: FunctionComponent = anonymOnly(ForgotPassword);
+const AnonymLogin: FC = anonymOnly(Login);
+const AnonymRegister: FC = anonymOnly(Register);
+const AnonymForgotPassword: FC = anonymOnly(ForgotPassword);
+
+const AuthDashboard: FC = requiresAuth(Dashboard);
 
 const App: React.FunctionComponent = () => (
   <div className="App">
@@ -39,7 +42,7 @@ const App: React.FunctionComponent = () => (
         <Route
           key={url.dashboard}
           path={url.dashboard}
-          component={Dashboard}
+          component={AuthDashboard}
         />
         <Route
           key={url.root}

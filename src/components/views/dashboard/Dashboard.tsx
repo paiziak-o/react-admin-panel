@@ -7,7 +7,7 @@ interface Props {
   children: ReactNode;
 }
 
-const Dashboard: React.FC<Props> = ({ children, wrapperClass }: Props) => (
+const Dashboard: React.FC = () => (
   <AdminWrapper wrapperClass="dashbord">
     wrapper
   </AdminWrapper>

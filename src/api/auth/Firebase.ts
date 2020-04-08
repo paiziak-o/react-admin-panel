@@ -30,6 +30,10 @@ class Firebase implements IAuth {
     return firebase.auth().createUserWithEmailAndPassword(email, password);
   }
 
+  logout = (): void => {
+    firebase.auth().signOut();
+  }
+
   getCurrentUser = async (): Promise<any> => {
     return await new Promise((result, reject) => {
       firebase.auth().onAuthStateChanged(function(user) {
