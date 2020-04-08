@@ -15,6 +15,8 @@ const login = (action$: any, state$: any, { auth }: { auth: IAuth }) => action$.
       observer.next(loginSuccess());
     } catch (error) {
       observer.next(loginFailed(error));
+    } finally {
+      observer.complete()
     }
   })),
 );
