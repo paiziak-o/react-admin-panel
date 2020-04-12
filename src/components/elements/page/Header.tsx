@@ -29,6 +29,7 @@ const Header: React.FunctionComponent = () => {
             <i className="fas fa-envelope fa-fw"></i>
             <span className="badge badge-danger badge-counter">3+</span>
           </Nav.Link>
+          <div className="topbar-divider d-none d-sm-block"></div>
           <NavDropdown
             alignRight
             title={<>
