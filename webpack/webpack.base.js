@@ -28,6 +28,27 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(ttf|eot|woff|woff2)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            name: 'webfonts/[name].[ext]',
+            limit: 10000,
+          },
+        },
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-url-loader',
+        options: {
+          // Images larger than 20 KB won’t be inlined
+          limit: 20 * 1024,
+          noquotes: true,
+          esModule: false,
+          name: '[path][name].[hash].[ext]',
+        },
+      },
     ]
   },
   plugins: [

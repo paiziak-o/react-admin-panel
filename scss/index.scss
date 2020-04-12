@@ -1,3 +1,8 @@
+@import './vendors/fontawesome/fontawesome.scss';
+@import "./vendors/fontawesome/solid.scss";
+@import "./vendors/fontawesome/brands.scss";
+@import "./vendors/fontawesome/regular.scss";
+
 @import './flex.scss';
 @import './views/auth/AuthWrapper.scss';
 @import './AdminWrapper.scss';

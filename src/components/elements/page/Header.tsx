@@ -21,7 +21,7 @@ const Header: React.FunctionComponent = () => {
           <Button className="header-search-btn">Search</Button>
         </Form>
         <Nav>
-          <Nav.Link href={url.dashboard}>Dashboard</Nav.Link>
+          <Nav.Link href={url.dashboard}><i className="fas fa-bell"></i></Nav.Link>
           <NavDropdown alignRight title="Account" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Divider />
