@@ -11,9 +11,6 @@ import requiresAuth from './components/hoc/RequiresAuth';
 
 import { url } from './constants';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.scss';
-
 const AnonymLogin: FC = anonymOnly(Login);
 const AnonymRegister: FC = anonymOnly(Register);
 const AnonymForgotPassword: FC = anonymOnly(ForgotPassword);
