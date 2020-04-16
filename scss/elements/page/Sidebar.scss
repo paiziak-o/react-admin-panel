@@ -1,4 +1,10 @@
 .admin-sidebar {
+  background: #4e73df;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
   .nav-item {
     // Customize Dropdown Arrows for Navbar
     &.dropdown {
@@ -160,6 +166,7 @@
   }
   hr.sidebar-divider {
     margin: 0 1rem 1rem;
+    width: 70%;
   }
   .sidebar-heading {
     text-align: center;
