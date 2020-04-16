@@ -3,6 +3,14 @@
 @import "./vendors/fontawesome/brands.scss";
 @import "./vendors/fontawesome/regular.scss";
 
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "./variables.scss";
+@import "./utils/animation";
+@import "./utils/background";
+// @import "./mixins/breakpoints.scss";
+
 @import './flex.scss';
 @import './views/auth/AuthWrapper.scss';
 @import './AdminWrapper.scss';
