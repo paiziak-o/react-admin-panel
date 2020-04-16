@@ -10,8 +10,10 @@ interface Props {
 const AdminWrapper: React.FC<Props> = ({ children, wrapperClass }: Props) => (
   <div className={`wrapper ${wrapperClass}`}>
     <Header />
-    <Sidebar />
-    {children}
+    <div className="content">
+      <Sidebar />
+      {children}
+    </div>
   </div>
 );
 
