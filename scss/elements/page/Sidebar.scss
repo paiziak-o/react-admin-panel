@@ -4,6 +4,7 @@
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
+  padding: 0;
   list-style: none;
   &.open {
     width: 14rem!important;
@@ -22,9 +23,12 @@
         }
       }
     }
+    hr.sidebar-divider {
+      width: 85%;
+    }
   }
   .nav-item {
-    // Customize Dropdown Arrows for Navbar
+    width: 100%;
     &.dropdown {
       .dropdown-toggle {
         &::after {

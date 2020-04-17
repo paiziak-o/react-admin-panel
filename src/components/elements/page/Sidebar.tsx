@@ -1,12 +1,24 @@
 import React, { useState } from 'react';
-import {
-  Navbar, Nav, NavDropdown, Form, FormControl, Button,
-} from 'react-bootstrap';
+import { useRouteMatch } from "react-router";
+import { Navbar, Nav, } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
+import { url } from '../../../constants';
 
 const Sidebar: React.FunctionComponent = () => {
   const [ isOpen, setOpen ] = useState(false);
+  const router = useRouteMatch();
+  console.log(router);
+  const isActive = (path: string) => path === router.path ? 'active' : '';
+
   return (
     <Navbar expand="lg" className={`admin-sidebar bg-gradient-primary ${isOpen ? 'open' : ''}`}>
+      <Nav.Item className={isActive(url.dashboard)}>
+        <Nav.Link to={url.dashboard} as={Link}>
+          <i className="fas fa-fw fa-tachometer-alt" />
+          <span>Dashboard</span>
+        </Nav.Link>
+      </Nav.Item>
       <Nav.Item>
         <Nav.Link>
           <i className="fas fa-fw fa-table" />
