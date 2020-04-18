@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 import { status, url } from '../../constants';
+import Loader from '../elements/Loader';
 
 import { selectAuthStatus } from '../../reducers';
 
@@ -14,9 +15,7 @@ export default (AnonymComponent: FunctionComponent): FunctionComponent => {
       return <Redirect to={url.dashboard} />;
     }
     if (loginStatus === status.pending) {
-      return (
-        <div>Login...</div>
-      );
+      return (<Loader />);
     }
 
     return (<AnonymComponent />)
