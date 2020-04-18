@@ -11,6 +11,7 @@ const logout = (action$: any, state$: any, { auth }: { auth: IAuth }) => action$
   rx.exhaustMap(() => Observable.create((observer: any) => {
     auth.logout();
     observer.next(loginNone());
+    observer.complete();
   })),
 );
 

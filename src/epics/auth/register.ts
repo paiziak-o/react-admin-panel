@@ -15,6 +15,9 @@ const register = (action$: any, state$: any, { auth }: { auth: IAuth }) => actio
     })
     .catch((error: any) => {
       observer.next(registerFailed(error));
+    })
+    .finally(() => {
+      observer.complete();
     });
   })),
 );
