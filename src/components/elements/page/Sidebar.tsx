@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import { useRouteMatch } from "react-router";
 import { Navbar, Nav, } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import { url } from '../../../constants';
 
-const Sidebar: React.FunctionComponent = () => {
+const Sidebar: FC = () => {
   const [ isOpen, setOpen ] = useState(false);
   const router = useRouteMatch();
   console.log(router);
