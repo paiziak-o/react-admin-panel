@@ -14,6 +14,7 @@ class Firebase implements IAuth {
       appId: '1:348947102767:web:2b8809ce30baf56cba5ada',
       measurementId: 'G-XV6ENSB4W8',
     });
+    firebase.analytics();
   }
 
   login = async (email: string, password: string): Promise<any> => {
