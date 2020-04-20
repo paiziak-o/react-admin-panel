@@ -30,7 +30,7 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 const Dashboard: React.FC = () => (
   <AdminWrapper wrapperClass="dashbord">
-    <Container fluid>
+    
       <Row>
         <Col className="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -45,7 +45,7 @@ const Dashboard: React.FC = () => (
         <Box icon="fas fa-clipboard-list" title="TASKS" price="50" />
         <Box icon="fas fa-comments" title="PENDING REQUESTS" price="18" />
       </Row>
-      <Row>
+      <Row className="row-eq-height">
         <Col xl={8} lg={7}>
           <div className="card shadow mb-4">
             <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -78,7 +78,6 @@ const Dashboard: React.FC = () => (
           </div>
         </Col>
       </Row>
-    </Container>
   </AdminWrapper>
 );
 

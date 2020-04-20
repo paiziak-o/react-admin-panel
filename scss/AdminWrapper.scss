@@ -2,9 +2,14 @@
   // Elements
   @import './elements/page/Sidebar.scss';
   @import './elements/page/Header.scss';
+  @import './elements/page/Footer.scss';
 
   background: #f8f9fc;
   .content {
     display: flex;
+    // .page-content {
+    //   position: relative;
+    //   margin-bottom: 5px;
+    // }
   }
 }
