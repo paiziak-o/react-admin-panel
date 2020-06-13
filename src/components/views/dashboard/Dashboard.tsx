@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer, PieChart, Pie } from 'recharts';
 
 import AdminWrapper from '../AdminWrapper';
+import RequiresAuth from '../../hoc/RequiresAuth';
 import Box from './Box';
 
 interface Props {
@@ -26,7 +27,6 @@ const data2 = [
   { name: 'Group D', value: 200 },
 ];
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
-
 
 const Dashboard: React.FC = () => (
   <AdminWrapper wrapperClass="dashbord">

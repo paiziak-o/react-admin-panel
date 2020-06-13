@@ -57,11 +57,12 @@
     "fsevents": "^1.2.7"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.10.1",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
     "awesome-typescript-loader": "^5.2.1",
-    "css-loader": "^3.5.2",
     "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",
@@ -82,7 +83,7 @@
     "typescript": "^3.7.5",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-merge": "^4.2.2",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
   }
 }
