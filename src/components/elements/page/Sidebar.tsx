@@ -3,7 +3,7 @@ import { useRouteMatch } from "react-router";
 import { Navbar, Nav, } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-import { url } from '../../../constants';
+import { url } from '#/constants';
 
 const Sidebar: FC = () => {
   const [ isOpen, setOpen ] = useState(false);

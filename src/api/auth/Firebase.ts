@@ -37,7 +37,7 @@ class Firebase implements IAuth {
 
   getCurrentUser = async (): Promise<any> => {
     return await new Promise((result, reject) => {
-      firebase.auth().onAuthStateChanged(function(user) {
+      firebase.auth().onAuthStateChanged(function(user: any) {
         if (user) {
           result({ result: true, ...user });
         } else {
