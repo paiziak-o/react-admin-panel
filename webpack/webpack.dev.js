@@ -8,5 +8,10 @@ module.exports = merge(base, {
     historyApiFallback: true,
     port: 3000,
     hot: true,
-  }
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
 });

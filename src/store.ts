@@ -21,7 +21,6 @@ const epicsMiddleware = createEpicMiddleware({
 
 const initState: any = {
   login: {
-
   },
 };
 
