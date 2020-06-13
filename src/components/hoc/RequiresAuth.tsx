@@ -4,9 +4,9 @@ import { Redirect } from 'react-router-dom';
 
 import Loader from '../elements/Loader';
 
-import { status, url } from '../../constants';
+import { status, url } from '#/constants';
 
-import { selectAuthStatus } from '../../reducers';
+import { selectAuthStatus } from '#/reducers';
 
 export default (AnonymComponent: FunctionComponent): FunctionComponent => {
   const RequiresAuth: React.FC = () => {

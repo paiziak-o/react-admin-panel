@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import AuthWrapper from './AuthWrapper';
 
-import { url } from '../../../constants';
+import { url } from '#/constants';
 
 const Register: React.FunctionComponent = () => (
   <AuthWrapper wrapperClass="register">

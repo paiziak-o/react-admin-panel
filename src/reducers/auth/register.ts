@@ -1,5 +1,5 @@
-import types from '../../actions/types';
-import { status } from '../../constants';
+import types from '#/actions/types';
+import { status } from '#/constants';
 
 export const auth = (state: any = {
   status: status.none,

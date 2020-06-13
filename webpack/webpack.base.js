@@ -9,7 +9,11 @@ const devMode = env === 'development';
 module.exports = {
   entry: './src/index.tsx',
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
+    alias: {
+      '~': path.resolve(__dirname, '../'),
+      '#': path.resolve(__dirname, '../src'),
+    }
   },
   module: {
     rules: [

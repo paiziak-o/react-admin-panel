@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 
 import AuthWrapper from './AuthWrapper';
 
-import { login } from '../../../actions';
+import { login } from '#/actions';
 
-import { url } from '../../../constants';
+import { url } from '#/constants';
 
 const Login: React.FunctionComponent = () => {
   const dispatch = useDispatch();

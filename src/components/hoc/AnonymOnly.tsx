@@ -2,10 +2,10 @@ import React, { FunctionComponent } from 'react';
 import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import { status, url } from '../../constants';
+import { status, url } from '#/constants';
 import Loader from '../elements/Loader';
 
-import { selectAuthStatus } from '../../reducers';
+import { selectAuthStatus } from '#/reducers';
 
 export default (AnonymComponent: FunctionComponent): FunctionComponent => {
   const AnonymOnly: React.FC = () => {

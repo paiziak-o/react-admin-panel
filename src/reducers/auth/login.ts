@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
-import types from '../../actions/types';
-import { status } from '../../constants';
+import types from '#/actions/types';
+import { status } from '#/constants';
 
 export const login = (state: any = {
   status: status.none,

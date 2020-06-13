@@ -4,8 +4,8 @@ import {
   Navbar, Nav, NavDropdown, Form, FormControl, Button,
 } from 'react-bootstrap';
 
-import { logout } from '../../../actions';
-import { url } from '../../../constants';
+import { logout } from '#/actions';
+import { url } from '#/constants';
 
 
 const Header: React.FunctionComponent = () => {
